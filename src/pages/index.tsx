@@ -8,10 +8,10 @@ export { Head } from "../components/layout";
 
 // Add fade or some animation so this doesn't look garbage
 function BannerLogo() {
-    const [ margin, setMargin ] = React.useState({ top: "", bottom: "" });
+    const [margin, setMargin] = React.useState({ top: "", bottom: "" });
     var logoStyle = {
-        maxWidth: "75%",
-        height: "auto",
+        maxWidth: "30%",
+        height: "30%",
         marginTop: margin.top,
         marginBottom: margin.bottom,
     };
@@ -20,7 +20,7 @@ function BannerLogo() {
 
     // TODO: Add debounce so this isn't running at the max speed of the eventLoop
     // This whole thing just centers the logo vertically
-    React.useEffect( () => {
+    React.useEffect(() => {
         function sizeMargins() {
             if (ref == null)
                 return;
@@ -43,9 +43,26 @@ export default function Page() {
     // Definitely need like actual content here. No clue what to put!
     return (
         <Layout title="OurVoice Technologies" hideHeader={true}>
+
             <div className="center">
-                <BannerLogo />
+
+
+                <div className="p2"><BannerLogo /></div>
+                <div className="p3">
+                    <h1>Hello, and welcome to OurVoice ! 🤩</h1>
+                    <p>We are in the business of giving people a voice.</p>
+                </div>
+
+
             </div>
+
         </Layout>
+
     );
 }
+
+
+//implement 
+
+
+// fix up text

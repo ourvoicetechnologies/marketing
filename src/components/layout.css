@@ -1,5 +1,15 @@
 @import "../styles/colors.css";
 
+@font-face {
+    font-family: Akira;
+    src: url('../fonts/Akira\ Expanded\ Demo.otf');
+}
+
+@font-face {
+    font-family: monospace;
+    src: url('../fonts/monofonto\ rg.otf');
+}
+
 body {
     margin: 0px;
     background-color: var(--cpt-base);
@@ -8,13 +18,88 @@ body {
     /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+
+
+
+main {
+    width: auto;
+    height: auto;
+    position: relative;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        top: 200px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+
+}
+
+.p2 {
+    width: auto;
+    height: auto;
+    position: relative;
+    animation: fadeoutAnimation ease-out 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+@keyframes fadeoutAnimation {
+    from{
+        top: 0px;
+        opacity: 1;
+
+    }
+    to{
+        top:-600px;
+        opacity: 0;
+    }
+
+}
+
+.p3 {
+    width: auto;
+    height: auto;
+    position: relative;
+    animation: fadein2Animation ease-out 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode:both;
+    animation-delay: 6s;
+}
+
+@keyframes fadein2Animation {
+    from {
+        top: 0px;
+        opacity: 0;
+    }
+
+    to {
+        top: -600px;
+        opacity: 1;
+    }
+
+
+}
+
 .center {
     display: inline-block;
     text-align: center;
     width: 100%;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
 }
 
 .centerMargins {
@@ -24,8 +109,79 @@ body {
 
 h1 {
     margin: 40px 0px 10px 0px;
+    text-align: center;
+    font-family: Akira;
+    font-size: 24px;
+    font-style: italic;
 }
+
 
 ul {
     list-style-type: none;
+}
+
+.left-align {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+.employes {
+    height: 90vh;
+    margin: 2rem;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+}
+
+.employe {
+
+    font-size: 3rem;
+    text-align: center;
+    padding: 14rem;    
+}
+
+.texts {
+    height: 90vh;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows:  1fr 1fr 1fr;
+
+}
+
+.text {
+    color: black;
+    font-size: 3rem;
+    text-align: left;
+    padding: 4rem;
+
+}
+
+li {
+    font-family: monospace;
+    font-size: 19px;
+}
+
+p {
+    font-family: monospace;
+    font-size: 19px;
+}
+
+
+.test {
+    font-family: Cormorant;
+    src: url("../fonts/Cormorant-VariableFont_wght.ttf")
+}
+
+auto-formater{
+    width: auto;
+    height: auto;
 }
